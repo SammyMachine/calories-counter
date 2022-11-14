@@ -54,16 +54,16 @@ submitButton.addEventListener('click', (evt) => {
 });
 
 resetButton.addEventListener('click', () => {
-    genderMale.setAttribute('checked', true);
-    genderFemale.removeAttribute('checked', true);
+    genderMale.checked = true;
+    genderFemale.checked = false;
     age.value = '';
     height.value = '';
     weight.value = '';
-    activities.querySelector('#activity-minimal').setAttribute('checked', 'true');
-    activities.querySelector('#activity-low').removeAttribute('checked', 'true');
-    activities.querySelector('#activity-medium').removeAttribute('checked', 'true');
-    activities.querySelector('#activity-high').removeAttribute('checked', 'true');
-    activities.querySelector('#activity-maximal').removeAttribute('checked', 'true');
+    activities.querySelector('#activity-minimal').checked = true;
+    activities.querySelector('#activity-low').checked = false;
+    activities.querySelector('#activity-medium').checked = false;
+    activities.querySelector('#activity-high').checked = false;
+    activities.querySelector('#activity-maximal').checked = false;
     result.classList.add('counter__result--hidden');
     currentState();
 });
